@@ -4,18 +4,24 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/allstackdev/goapi/internal/handlers"
-
+	"github.com/allstackdev1/goapi/internal/handlers"
 	"github.com/go-chi/chi"
 	log "github.com/sirupsen/logrus"
 )
 
-func main(){
+func main() {
 	log.SetReportCaller(true)
-	var r *chi.Max = chi.NewRouter()
+	var r *chi.Mux = chi.NewRouter()
 	handlers.Handler(r)
 
 	fmt.Println("Starting Go API service...")
+
+	fmt.Println(`
+	______     ______        ______     ______   __    
+ /\  ___\   /\  __ \      /\  __ \   /\  == \ /\ \   
+ \ \ \__ \  \ \ \/\ \     \ \  __ \  \ \  _-/ \ \ \  
+	\ \_____\  \ \_____\     \ \_\ \_\  \ \_\    \ \_\ 
+	 \/_____/   \/_____/      \/_/\/_/   \/_/     \/_/ `)
 
 	err := http.ListenAndServe("localhost:8000", r)
 

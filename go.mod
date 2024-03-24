@@ -1,9 +1,10 @@
-module github.com/allstackdev/goapi
+module github.com/allstackdev1/goapi
 
 go 1.22.1
 
 require (
 	github.com/go-chi/chi v1.5.5
+	github.com/gorilla/schema v1.2.1
 	github.com/sirupsen/logrus v1.9.3
 )
 

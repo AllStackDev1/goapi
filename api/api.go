@@ -6,12 +6,12 @@ import (
 )
 
 // Coin Balance Params
-type CoinBalanceParam struct {
+type CoinBalanceParams struct {
 	Username string
 }
 
 // Coin Balance Response
-type CoinBalanceBalance struct {
+type CoinBalanceResponse struct {
 	// Success Cocd, Usually 200
 	Code int
 
@@ -41,7 +41,7 @@ func writeError(w http.ResponseWriter, message string, code int) {
 }
 
 var (
-	RequestErrorHander = func(w http.ResponseWriter, err error) {
+	RequestErrorHandler = func(w http.ResponseWriter, err error) {
 		writeError(w, err.Error(), http.StatusBadRequest)
 	}
 	InternalErrorHandler = func(w http.ResponseWriter) {

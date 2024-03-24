@@ -1,8 +1,7 @@
-package Handler
+package handlers
 
 import (
-	"github.com/allstackdev/goapi/internal/middleware"
-
+	"github.com/allstackdev1/goapi/internal/middleware"
 	"github.com/go-chi/chi"
 	chimiddle "github.com/go-chi/chi/middleware"
 )
